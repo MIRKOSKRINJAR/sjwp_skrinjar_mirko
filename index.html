@@ -7,6 +7,13 @@
     <meta name="author" content="Mirko Skrinjar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skriptni jezici</title>
+    <!-- INTERNAL CSS -->
+    <style>
+      .drugi{
+        color:aliceblue;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <h1>ZADACA:</h1>
@@ -17,6 +24,13 @@
   <li><a href="zadace/zadaca5.html" target="_blank">Zadaca5</a></li>
   <li><a href="zadace/zadaca6.html" target="_blank">Zadaca6</a></li>
   <li><a href="forms/zivotopis.html" target="_blank">Zivotopis</a></li></ol>
+  <h2>Dodavanje CSS-a</h2>
+    <!-- 3 nacina dodavanja css-a -->
+     <ul>
+      <li style ="color:blue;background-color: aliceblue;">INLINE</li>
+      <li class="drugi">INTERNAL</li>
+      <li class="treci">EXTERNAL</li>
+     </ul>
 <!--   heading elementi 
      <h1>Naslov 1 MIRKO</h1>
      <h2>Naslov 2 MIRKO</h2>
@@ -51,7 +65,7 @@
     <!-- LISTE, ul - unordered liste, ol - ordered liste, dl - definition liste -->
     <h2>VOCNI DESERT U CASI</h2>
     <hr>
-    <h3>SASTOJCI:</h3>
+    <h3 id="naslov">SASTOJCI:</h3>
     <ul type = "circle">
       <li>230 g kreme za kremšnite</li>
       <li>500 ml hladnog mlijeka</li>
@@ -99,7 +113,7 @@
       </ol>
       <li>C</li>
     </ul>
-    <p>
+    <p draggable="true">
       <br>
       <p>This is the first sentence.
   <small>This whole sentence is in small letters.</small>
