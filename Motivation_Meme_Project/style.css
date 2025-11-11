@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+}
+.slika{
+    margin-left: 35%;
+    width: 700px;
+    height: 380px;
+    border: 2px solid white;
+}
+.textveci{
+    color: white;
+    margin-left: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    text-align: center;
+    font-size: 40px;
+}
+.textmanji{
+    color: white;
+    margin-left: 5%;
+    text-align: center;
+}
