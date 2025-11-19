@@ -1,20 +1,21 @@
 body{
-    background-color: lightblue;
+    background-color: rgb(161, 158, 158);
 }
 
 .obrub{
     border: 2px solid grey;
-    border-radius: 1.5%;
-    width: 400px;
-    height: 580px;
+    border-radius: 2%;
+    width: 430px;
+    height: 700px;
     margin-left: 40%;
     margin-top: 10%;
     background-color: white;
 }
 .Slika{
-    margin-left: 10%;
-    width: 280px;
-    height: 280px;
+    margin-left: 2.7%;
+    margin-top: 3%;
+    width: 410px;
+    height: 300px;
     border-radius: 1.5%;
 
 }
@@ -22,7 +23,7 @@ body{
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
-    margin-top: 10%;
+    margin-top: 8%;
     font-weight: bold;
     margin-left: 5%;
     font-size: 30px;
@@ -32,26 +33,41 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: normal;
-    width: 350px;
-    margin-top: 10%;
+    width: 425px;
+    margin-top: 1%;
     color: grey;
-        margin-left: 5%;
+    margin-left: 5%;
+    font-size: 22px;
 }
-.readmore{
-    margin-top: -5%;
-    margin-left: 45%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: lightblue;
-    text-decoration: none;
-    background-color: blue;
-    width: 150px;
-    height: 50px;
+.btn {
+    display: block;
+    width: 140px;
     text-align: center;
-    border-radius: 50%;
-
+    margin-top: -3.5%;
+    margin-left: 45.5%;
+    padding: 12px;
+    background: rgb(179, 202, 233);
+    color: #3c7eed;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
 }
-.readmoretekst{
-    margin-top: 15%;
+
+.naturelake span {
+    display: inline-block;
+    border: 2px solid grey;
+    padding: 8px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 5%;
+    font-size: 16px;
+    color: grey;
+    font-weight: bold;
+}
+.nature{
+    width: 50px;
+    margin-left: 5%;
+}
+.lake{
+    margin-left: 2.5%;
 }

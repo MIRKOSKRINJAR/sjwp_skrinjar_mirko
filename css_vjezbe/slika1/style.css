@@ -12,19 +12,19 @@
 th,td {
         width: 600px;
         text-align: left;
-        border: 1px solid black;
+        border: 1px solid grey;
         padding: 1%;
         border-collapse: collapse;
         height: 25px;
 }
 .row0{
-    background-color: lightblue;
+    background-color: #2a77f7;
     border: 1px solid grey;
     border-collapse: collapse;
     color: white;
 }
 .row1{
-    background-color: lightgrey;
+    background-color: rgb(156, 155, 155);
     border: 1px solid grey;
     border-collapse: collapse;
 }
@@ -34,7 +34,7 @@ th,td {
     border-collapse: collapse;
 }   
 .row3{
-    background-color: lightgrey;
+    background-color: rgb(156, 155, 155);
     border: 1px solid grey;
     border-collapse: collapse;
 }
@@ -44,7 +44,7 @@ th,td {
     border-collapse: collapse;
 }
 .row5{
-    background-color: lightgrey;
+    background-color: rgb(156, 155, 155);
         border: 1px solid grey;
     border-collapse: collapse;
 }

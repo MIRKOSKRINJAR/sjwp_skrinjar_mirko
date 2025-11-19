@@ -1,0 +1,37 @@
+body{
+    background-color: grey;
+}
+.svekartice{
+    display: block;
+    padding: 10px;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 8%;
+}
+.prvidio{
+    width: 300px;
+    height: 400px;
+    display: block;
+    background-color: white;
+    border-radius: 5%;
+    overflow: hidden;
+}
+.drugidio{
+    width: 300px;
+    height: 400px;
+    display: block;
+    background-color: white;
+    border-radius: 5%;
+    overflow: hidden;
+}
+.trecidio{
+    width: 300px;
+    height: 400px;
+    display: block;
+    background-color: white;
+    border-radius: 5%;
+    overflow: hidden;
+}
+img{
+    width: 300px;
+}
