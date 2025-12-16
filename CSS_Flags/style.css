@@ -1,3 +1,7 @@
+h1{
+    margin-left: 700px;
+}
+
 .main{
     width: 500px;
     height: 300px;
@@ -149,5 +153,106 @@
     border-top: 30px solid transparent;
     border-left: 50px solid white;
     position: absolute;
+    z-index: 1;
+}
+.main5{
+    width: 500px;
+    height: 300px;
+    left: 550px;
+    position: relative;
+    background-color: lightgray;
+    border: black solid 2px;
+}
+.zvijezda{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 70px;
+    left: 170px;
+    background-color: gold;
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+    z-index: 1;
+}
+.zelena{
+    position: absolute;
+    width: 166.67px;
+    height: 300px;
+    left: 0px;
+    background-color: green;
+}
+.zuta{
+    position: absolute;
+    top: 0px;
+    width: 166.67px;
+    height: 300px;
+    left: 333.3px;
+    background-color: gold;
+}
+.crvena{
+    position: absolute;
+    top: 0px;
+    width: 166.67px;
+    height: 300px;
+    left: 166px;
+    background-color: red;
+}
+.main6{
+    width: 500px;
+    height: 300px;
+    left: 550px;
+    position: relative;
+    background-color: red;
+    border: black solid 2px;
+}
+.polumjesec{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 90px;
+    left: 250px;
+    background-color: white;
+    clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+    );
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+.bijelikrug{
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: 50px;
+    left: 75px;
+    background-color: white;
+    border-radius: 50%;
+}
+.crvenikrug{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 70px;
+    left: 120px;
+    background-color: red;
+    border-radius: 50%;
     z-index: 1;
 }
