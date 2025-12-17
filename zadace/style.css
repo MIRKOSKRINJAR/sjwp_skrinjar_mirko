@@ -1,3 +1,7 @@
+body{
+    font-family: 'Inter', sans-serif;
+}
+
 img{
     width: 400px;
     height: 300px;
@@ -52,7 +56,70 @@ img{
     position: relative;
     width: 500px;
     height: 300px;
-    border: 2px solid black;
+    padding: 1px;
+    border: 3px solid black;
     margin-top: -300px;
     left: 450px;
+}
+.sve
+{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.ime{
+    margin-top: 40px;
+    margin-left: 215px;
+    font-size: 16px;
+}
+.opis{
+    width: 220px;
+    margin-left: 195px;
+    text-align: justify;
+    color: #595959;
+}
+.opis1{
+    width: 260px;
+    margin-left: 180px;
+    margin-top: -15px;
+        color: #595959;
+}
+.fon,.mail{
+    margin-left: 180px;
+            color: #595959;
+}
+.emtel{
+    margin-top: 30px;
+    margin-left: 200px;
+            color: #595959;
+}
+.slikafejs{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 12px;
+    margin-left: 175px;
+}
+.fejs{
+    color: #595959;
+}
+.ig{
+    margin-left: 40px;
+            color: #595959;
+}
+.slikaig{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 12px;
+    margin-left: 290px;
+}   
+.people{
+    position: absolute;
+    padding: 10px;
+    top: 55px;
+    left: 20px;
+    width: 150px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
 }
