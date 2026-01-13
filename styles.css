@@ -1,0 +1,201 @@
+.pozadina {
+    position: relative;
+    width: 1700px;
+    height: 500px;
+  background-color: rgb(98, 94, 94);
+}
+
+.first {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 1655px;
+    height: 50px;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+  background-color: rgb(180, 186, 191);
+}
+
+.second {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 10px;
+    width: 1660px;
+    height: 20px;
+    padding: 2px;
+    color: white;
+        font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(54, 134, 185);        
+}
+
+.third {
+        position: absolute;
+    margin-top: 123px;
+    margin-left: 10px;
+    width: 1660px;
+    height: 20px;
+    padding: 2px;
+    color: white;
+        font-family: Arial, Helvetica, sans-serif;
+  background-color: #3293c3;        
+}
+
+.fourth {
+        position: absolute;
+    margin-top: 146px;
+    margin-left: 10px;
+    width: 1660px;
+    height: 20px;
+    padding: 2px;
+    color: white;
+        font-family: Arial, Helvetica, sans-serif;
+  background-color: #469fcb;        
+}
+
+.fifth {
+        position: absolute;
+    margin-top: 169px;
+    margin-left: 10px;
+    width: 1660px;
+    height: 20px;
+    padding: 2px;
+    color: white;
+        font-family: Arial, Helvetica, sans-serif;
+  background-color: #5fadd2;        
+}
+
+.six {
+        position: absolute;
+    margin-top: 192px;
+    margin-left: 10px;
+    width: 1660px;
+    height: 20px;
+    padding: 2px;
+    color: white;
+        font-family: Arial, Helvetica, sans-serif;
+  background-color: #75bada;        
+}
+
+.seven {
+        position: absolute;
+    margin-top: 215px;
+    margin-left: 10px;
+    width: 1660px;
+    height: 20px;
+    padding: 2px;
+    color: white;
+        font-family: Arial, Helvetica, sans-serif;
+  background-color: #8dc4df;        
+}
+
+.eight {
+        position: absolute;
+    margin-top: 238px;
+    margin-left: 10px;
+    width: 1660px;
+    height: 20px;
+    padding: 2px;
+    color: white;
+        font-family: Arial, Helvetica, sans-serif;
+  background-color: #9ccce4;    
+}
+
+.nine {
+    position: absolute;
+    margin-top: 262px;
+    margin-left: 10px;
+    width: 1664px;  
+    height: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #23ab7e;
+  text-align: left;        
+}
+.neutral{
+    font-size: 30px;
+}
+
+.ten {
+        position: absolute;
+    margin-top: 312px;
+    margin-left: 10px;
+    width: 1660px;  
+    height: 20px;
+    padding: 2px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #e799b5;        
+}
+.eleven {
+            position: absolute;
+    margin-top: 334px;
+    margin-left: 10px;
+    width: 1660px;  
+    height: 20px;
+    padding: 2px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #e587a7;
+}
+
+.twelve {
+                position: absolute;
+    margin-top: 356px;
+    margin-left: 10px;
+    width: 1660px;  
+    height: 20px;
+    padding: 2px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #e2749a;    
+}
+
+.thirteen {
+                position: absolute;
+    margin-top: 378px;
+    margin-left: 10px;
+    width: 1660px;  
+    height: 20px;
+    padding: 2px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #e0658a;      
+}
+
+.fourteen {
+                position: absolute;
+    margin-top: 401px;
+    margin-left: 10px;
+    width: 1660px;  
+    height: 20px;
+    padding: 2px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #db5580;    
+}
+
+.fifteen {
+                position: absolute;
+    margin-top: 424px;
+    margin-left: 10px;
+    width: 1660px;  
+    height: 20px;
+    padding: 2px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #da3d75;        
+}
+.sixteen {
+                position: absolute;
+    margin-top: 447px;
+    margin-left: 10px;
+    width: 1660px;  
+    height: 20px;
+    padding: 2px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  background-color: #d9276c;        
+}

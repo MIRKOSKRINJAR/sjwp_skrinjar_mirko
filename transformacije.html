@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformacije</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 100px;
+        }
+        .translate{
+           /* transform: translate(50px, 50px);*/
+           transform: translate3d(100px,50px,10px);
+        }
+        .rotate{
+            transform: rotate(45deg);
+        }
+        .scale{
+            transform: scale(1.5);
+        }
+        .skew{
+            transform: skew(10deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Transformacije</h1>
+    <ul>
+        <li>Translacije (Translate)</li>
+        <li>Rotacije (Rotate)</li>
+        <li>Skaliranje (Scale)</li>
+        <li>Deformacije (Skew)</li>
+    </ul>
+    <div class="translate"></div>
+    <div class="rotate"></div>
+    <div class="scale"></div>
+    <div class="skew"></div>
+</body>
+</html>
