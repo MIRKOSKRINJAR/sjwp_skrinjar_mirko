@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tranzicije 2</title>
+</head>
+<style>
+    .div1{
+        width: 250px;
+        height: 250px;
+        background-color: red;
+        transition: width 2s 0s ease-in-out;
+    }
+    .div1:hover{
+        width: 650px;
+    }
+
+    .div2{
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        
+    }
+    .div3{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        float: left;
+        transition: all 1s 1s ease-in-out;
+    }
+    .div4{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        margin-top: 125px;
+        float: left;
+        transition: all 2s 2s ease-in-out;
+    }
+    .div2:hover .div3 ,.div2:hover .div4{
+        width: 600px;
+    }
+    .div5{
+        position: relative;
+        left: 250px;
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        background-color: white;
+        margin-top: 50px;
+
+    }
+    .div6, .div7, .div8, .div9{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        transition: all 1s ease-in-out;
+    }
+    .div6{
+        background-color: red;
+        top: 0;
+        left: 0;
+    }
+    .div7{
+        background-color: yellow;
+        top: 0;
+        right: 0;
+    }
+    .div8{
+        background-color: blue;
+        bottom: 0;
+        left: 0;
+    }
+    .div9{
+        background-color: green;
+        bottom: 0;
+        right: 0;
+    }
+    .div5:hover .div6{
+        transform: rotate(180deg) translateX(150px) ;
+    }
+    .div5:hover .div7{
+        transform: rotate(180deg) translateX(-150px);
+    }
+    .div5:hover .div8{
+        transform: rotate(180deg) translateX(150px);
+    }
+    .div5:hover .div9{
+        transform: rotate(180deg) translateX(-150px);
+    }
+
+</style>
+<body>
+    <h1>Tranzicije 2</h1>
+    <div class="div1"></div>
+    <h1>Tranzicije 3</h1>
+    <div class="div2">
+        <div class="div3"></div>
+        <div class="div4"></div>
+    </div>
+    <h1>Tranzicije 4</h1>
+    <div class="div5">HI
+        <div class="div6"></div>
+        <div class="div7"></div>
+        <div class="div8"></div>
+        <div class="div9"></div>
+    </div>
+</body>
+</html>
