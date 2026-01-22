@@ -113,32 +113,107 @@
         background-color: lime;
         border-radius: 50%;
         position: absolute;
-        top: 45%;
-        left: 45%;
+        top: 41%;
+        left: 42%;
         z-index: 1;
         animation: toc 2s linear infinite;
     }
     .kretanje{
-        width: 5px;
-        height: 5px;
+        width: 0px;
+        height: 0px;
         border: 5px solid gray;
         border-radius: 50%;
         position: absolute;
         top: 45%;
-        left: 45%;
+        left: 46%;
         animation: kret 2s linear infinite;
+        transform: translate(-45%, -45%);
         z-index: 2;
     }
-    @keyframes kret {
-        0%{
-            width: 5px;
-            height: 5px;
+
+        .detektiran {
+            width: 10px;
+            height: 10px;
+            background-color: #04f524;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            box-shadow: 0 0 10px rgba(21, 255, 12, 0.8);
         }
-        100%{
-            width: 150px;
-            height: 150px;
+
+        .det-1 {
+            top: 30%;
+            left: 50%;
+            animation: izadi 2s linear infinite;
+            animation-delay: 0.5s;
         }
-    }
+
+        .det-6 {
+            top: 35%;
+            left: 30%;
+            animation: izadi 2s linear infinite;
+            animation-delay: 0.5s;
+        }
+        .det-4 {
+            top: 40%;
+            left: 77%;
+            animation: izadi 2s linear infinite;
+            animation-delay: 1s;
+        }
+
+        .det-2 {
+            top: 50%;
+            left: 77%;
+            animation: izadi 2s linear infinite;
+            animation-delay: 1s;
+        }
+        .det-3 {
+            top: 85%;
+            left: 35%;
+            animation: izadi 2s linear infinite;
+            animation-delay: 1.5s;
+        }
+
+        .det-5 {
+            top: 90%;
+            left: 60%;
+            animation: izadi 2s linear infinite;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes kret {
+            0% {
+                width: 0px;
+                height: 0px;
+                opacity: 1;
+            }
+            100% {
+                width: 150px;
+                height: 150px;
+                opacity: 0;
+            }
+        }
+
+        @keyframes izadi {
+            0% {
+                opacity: 0;
+            }
+            0.1% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.5);
+            }
+            1% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+            99.9% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
     
     </style>
 </head>
@@ -150,6 +225,11 @@
     <div class="radar">
         <div class="tocka"></div>
         <div class="kretanje"></div>
-    </div>
+        <div class="detektiran det-1"></div>
+        <div class="detektiran det-2"></div>
+        <div class="detektiran det-3"></div>
+        <div class="detektiran det-4"></div>
+        <div class="detektiran det-5"></div>
+        <div class="detektiran det-6"></div>
 </body>
 </html>
