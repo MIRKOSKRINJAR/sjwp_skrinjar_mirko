@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        .dugme{
+            animation: povecanje 2s infinite alternate;
+        }
+        @keyframes povecanje{
+            0%{
+                transform: scale(1);
+            }
+            100%{
+                transform: scale(1.5);
+            }
+        }
+        .anim{
+            width: 200px;
+            height: 200px;
+            animation: mjenjanje 4s infinite alternate;
+        }
+        @keyframes mjenjanje{
+            0%{
+                background-color: red;
+            }
+            33%{
+                background-color: blue;
+            }
+            66%{
+                background-color: green;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+        .krug{
+            background-color: aqua;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: pomjer 3s infinite alternate;
+        }
+        @keyframes pomjer{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(200px);
+            }
+        }
+        .kartica{
+            width: 150px;
+            height: 200px;
+            background-color: orange;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            animation: rotacija 4s infinite alternate;
+        }
+        .kartica:hover{
+            transition-duration: 0.5s;
+            scale: 1.2;
+            background-color: purple;
+            text-shadow: 1px 1px 2px black;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            animation-timing-function: linear;
+            animation: skala 2s infinite;
+        }
+        @keyframes skala{
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    .load{
+        width: 100px;
+        height: 100px;
+        border: 10px solid blue;
+        border-top: 10px solid rgb(255, 255, 255);
+        border-radius: 50%;
+
+        animation: ucitavanje 1s linear infinite;
+        margin-top: 50px;
+        margin-left: 100px;
+    }
+    @keyframes ucitavanje{
+        0%{
+            transform: rotate(0);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .tekst{
+        font-size: 2rem;
+        animation-delay: 5s;
+        animation: boje 2s linear alternate;
+    }
+    @keyframes boje{
+        0%{
+            color: white;
+            margin-top: -5%;
+        }
+        75%{
+            color: white;
+        }
+        100%{
+            color: black;
+        }
+    }
+    .semafor{
+        position: relative;
+        width: 100px;
+        height: 300px;
+        background-color: black;
+    }
+    .crveno{
+        margin-left: 10px;
+        margin-top: 10px;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: black;
+        border-radius: 50%;
+        animation: paljenje 3s infinite;
+    }
+    @keyframes paljenje{
+        0%{
+            background-color: black;
+        }
+        33%{
+            background-color: red;
+        }
+        66%{
+            background-color: black;
+        }
+        100%{
+            background-color: black;
+        }
+    }
+.zuto{
+        margin-left: 10px;
+        margin-top: 100px;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: black;
+        border-radius: 50%;
+        animation: paljenje2 3s infinite;
+    }
+    @keyframes paljenje2{
+        0%{
+            background-color: black;
+        }
+        33%{
+            background-color: black;
+        }
+        66%{
+            background-color: yellow;
+        }
+        100%{
+            background-color: black;
+        }
+    }
+        .zeleno{
+        margin-left: 10px;
+        margin-top: 190px;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: black;
+        border-radius: 50%;
+        animation: paljenje3 3s infinite;
+    }
+    @keyframes paljenje3{
+        0%{
+            background-color: black;
+        }
+        33%{
+            background-color: black;
+        }
+        66%{
+            background-color: black;
+        }
+        100%{
+            background-color: green;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>PRVA ANIMACIJA</h1>
+    <button class="dugme">
+        KLIKNI ME
+    </button>
+    <h1>DRUGA ANIMACIJA</h1>
+    <div class="anim"></div>
+    <h1>TRECA ANIMACIJA</h1>
+    <div class="krug"></div>
+    <h1>CETVRTA ANIMACIJA</h1>
+    <div class="kartica">TEKST</div>
+    <h1>PETA ANIMACIJA</h1>
+    <div class="box"></div>
+    <h1>SESTA ANIMACIJA</h1>
+    <div class="load"></div>
+    <h1>SEDMA ANIMACIJA</h1>
+    <p class="tekst">MIRKO</p>
+    <h1>OSMA ANIMACIJA</h1>
+    <div class="semafor">
+        <div class="crveno"></div>
+        <div class="zuto"></div>
+        <div class="zeleno"></div>
+    </div>
+</body>
+</html>

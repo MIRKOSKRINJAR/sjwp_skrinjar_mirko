@@ -103,9 +103,44 @@
         margin-top: 50px;
         margin-left: 100px;
         position: relative;
-        
         animation: radarr 2s linear infinite;
 
+    }
+    p{
+        text-align: left;
+        color: lime;
+        margin-top: 65px;
+        margin-left: -20px;
+        font-size: 10px;
+
+    }
+    .m100{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: 2px dashed lime;
+        border-radius: 50%;
+        top: 33%;
+        left: 33%;
+        transform: translate(-15%, -15%);
+    }
+    .m100txt{
+        margin-top: 41%;
+        margin-left: -15%;
+    }
+    .m200txt{
+        margin-top: 44%;
+        margin-left: -10%;
+    }
+    .m200{
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        border: 2px dashed lime;
+        border-radius: 50%;
+        top: 22%;
+        left: 23%;
+        transform: translate(-15%, -15%);
     }
     .tocka{
         width: 15px;
@@ -181,6 +216,7 @@
             animation: izadi 2s linear infinite;
             animation-delay: 1.5s;
         }
+        
 
         @keyframes kret {
             0% {
@@ -222,7 +258,7 @@
     <div class="box">3.E</div>
     <div class="load"></div>
     <div class="box2"></div>
-    <div class="radar">
+    <div class="radar"> <p>300m</p>
         <div class="tocka"></div>
         <div class="kretanje"></div>
         <div class="detektiran det-1"></div>
@@ -231,5 +267,7 @@
         <div class="detektiran det-4"></div>
         <div class="detektiran det-5"></div>
         <div class="detektiran det-6"></div>
+        <div class="m100"><p class = "m100txt">100m</p></div>
+        <div class="m200"><p class = "m200txt">200m</p></div>
 </body>
 </html>
