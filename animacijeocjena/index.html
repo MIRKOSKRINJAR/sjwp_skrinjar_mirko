@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lampa {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin: 50px auto;
+            animation: blink 1.5s infinite;
+        }
+        .pojavljivanje p {
+            font-size: 24px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s infinite;
+        }
+        @keyframes fadeIn {
+            0% {
+                transform: translateX(-700px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+                box-shadow: 0 0 20px 10px yellow;
+            }
+            50% {
+                opacity: 0.2;
+                box-shadow: none;
+            }
+        }
+        .kvadratkrug {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 50px auto;
+            animation: krug 3s infinite alternate;
+        }
+        @keyframes krug {
+            0% {
+                border-radius: 0;
+            }
+            100% {
+                border-radius: 50%;
+            }
+        }
+        .rotacija {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 50px auto;
+            animation: rotate 2s linear infinite;
+        }
+        .rotacija:hover {
+            transition-duration: 0.4s;
+            transform: rotate(90deg);
+        }
+        .kvadrat{
+        position: relative;
+        margin: 50px auto;
+        width: 500px;
+        height: 300px;
+        background-color: black;
+    }
+    .stupac1, .stupac2, .stupac3, .stupac4, .stupac5{
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        height: 300px;
+        background-color: yellow;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .stupac1{
+        height: 50px;
+        left: 0px;
+        animation-name: paljenje;
+    }
+     @keyframes paljenje{
+        0%{
+            background-color: yellow;
+        }
+        25%{
+            background-color: yellow;
+        }
+        50%{
+            background-color: yellow;
+        }
+        75%{
+            background-color: yellow;
+        }
+        100%{
+            background-color: yellow;
+        }
+    }
+    .stupac2{
+        height: 100px;
+        left: 100px;
+        animation-name: stupacAnimacija2;
+    }
+         @keyframes stupacAnimacija2{
+        0%{
+            background-color: black;
+        }
+        25%{
+            background-color: yellow;
+        }
+        50%{
+            background-color: yellow;
+        }
+        75%{
+            background-color: yellow;
+        }
+        100%{
+            background-color: yellow;
+        }
+    }
+    .stupac3{
+        height: 150px;
+        left: 200px;
+        animation-name: stupacAnimacija3;
+    }
+         @keyframes stupacAnimacija3{
+        0%{
+            background-color: black;
+        }
+        25%{
+            background-color: black;
+        }
+        50%{
+            background-color: yellow;
+        }
+        75%{
+            background-color: yellow;
+        }
+        100%{
+            background-color: yellow;
+        }
+    }
+    .stupac4{
+        height: 200px;
+        left: 300px;
+        animation-name: stupacAnimacija4;
+    }
+         @keyframes stupacAnimacija4{
+        0%{
+            background-color: black;
+        }
+        25%{
+            background-color: black;
+        }
+        50%{
+            background-color: black;
+        }
+        75%{
+            background-color: yellow;
+        }
+        100%{
+            background-color: yellow;
+        }
+    }
+    .stupac5{
+        height: 300px;
+        left: 400px;
+        animation-name: stupacAnimacija5;
+    }
+         @keyframes stupacAnimacija5{
+        0%{
+            background-color: black;
+        }
+        25%{
+            background-color: black;
+        }
+        50%{
+            background-color: black;
+        }                                       
+        75%{
+            background-color: black;
+        }
+        100%{
+            background-color: yellow;
+        }
+    }
+        h2, h1{
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ISPITNA</h1>
+    <h2>PRVA ANIMACIJA</h2>
+    <div class="lampa"></div>
+    <h2>DRUGA ANIMACIJA</h2>
+    <div class="pojavljivanje"><p>TEKST</p></div>
+    <h2>TRECA ANIMACIJA</h2>
+    <div class="kvadratkrug"></div>
+    <h2>CETVRTA ANIMACIJA</h2>
+    <div class="rotacija"></div>
+    <h2>PETA ANIMACIJA</h2>
+    <div class="kvadrat">
+        <div class="stupac1"></div>
+        <div class="stupac2"></div>
+        <div class="stupac3"></div>
+        <div class="stupac4"></div>
+        <div class="stupac5"></div>
+    </div>
+</body>
+</html>
