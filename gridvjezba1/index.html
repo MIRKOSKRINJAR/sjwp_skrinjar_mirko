@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid vjezba</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+
+        }
+        .item{
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            border-radius: 10%;
+            background-color: gray;
+        }
+        .container2{
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .item2{
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            border-radius: 10%;
+            background-color: gray;
+        }
+        .container3{
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .item3{
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            border-radius: 10%;
+            background-color: gray;
+        }
+        .m{
+            grid-column: span 2;
+        }
+        .n{
+            grid-row: span 2;
+        }
+        .container4{
+            display: grid;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .item4{
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            border-radius: 10%;
+            background-color: gray;
+        }
+        .r{
+            grid-column: span 2;
+        }
+        .s{
+            grid-column: span 2;
+        }
+        .u
+        {
+            grid-column: span 3;  
+        }
+        .v{
+            grid-column: span 4;
+        }
+        .container4{
+            display: grid;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-template-rows: 100px 100px 100px;
+            gap: 10px;
+            margin-top: 20px;
+        } 
+        .container5{
+            display: grid;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .item5{
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            border-radius: 10%;
+            background-color: gray;
+        }
+        .aa{
+            grid-column: span 2;
+        
+        }
+        .bb{
+            grid-row:span 2;
+        }
+        .cc{
+            grid-row:span 2;
+        }
+        .container6{
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 150px 100px 100px;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .item6{
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            border-radius: 10%;
+            background-color: gray;
+        }
+        .aaa{
+            grid-column: span 4;
+            
+        }
+        .bbb{
+            align-items: start;
+        }
+        .ccc{
+            align-items: start;
+            grid-column: span 3;
+        }
+        .ddd{
+            grid-column:span 4;
+        }
+        .eee{
+            grid-column:span 4;
+        }
+        .container7{
+            display: grid;
+            grid-template-columns: repeat(6, 100px);
+            grid-template-rows: repeat(2, 100px);
+            gap: 10px;
+            margin-top: 20px;
+        } 
+        .item7{
+            display: flex;
+            justify-content: start;
+            font-size: 20px;
+            padding: 10px;
+            align-items: center;
+            border-radius: 10%;
+            background-color: white;
+            border: 1px solid black;
+        }
+        .aaaa{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ZADATAK 1</h2>
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+    </div>
+    <h2>ZADATAK 2</h2>
+    <div class="container2">
+        <div class="item2 g">D</div>
+        <div class="item2 h">A</div>
+        <div class="item2 i">F</div>
+        <div class="item2 j">E</div>
+        <div class="item2 k">B</div>
+        <div class="item2 l">C</div>
+    </div>
+    <h2>ZADATAK 3</h2>
+    <div class="container3">
+        <div class="item3 m">A</div>
+        <div class="item3 n">B</div>
+        <div class="item3 o">C</div>
+        <div class="item3 p">D</div>
+    </div>
+    <h2>ZADATAK 5</h2>
+        <div class="container4">
+        <div class="item4 r">A</div>
+        <div class="item4 s">B</div>
+        <div class="item4 t">C</div>
+        <div class="item4 u">D</div>
+        <div class="item4 v">E</div>
+    </div>
+        <h2>ZADATAK 6</h2>
+        <div class="container5">
+        <div class="item5 aa">A</div>
+        <div class="item5 bb">B</div>
+        <div class="item5 cc">C</div>
+        <div class="item5 dd">D</div>
+        <div class="item5 ee">E</div>
+    </div>
+        <h2>ZADATAK 7</h2>
+        <div class="container6">
+        <div class="item6 aaa">Header</div>
+        <div class="item6 bbb">Sidebar</div>
+        <div class="item6 ccc">Content <br>More content than we had before so this column is now quite tall</div>
+        <div class="item6 ddd">Sidebar 2</div>
+        <div class="item6 eee">Footer</div>
+    </div>
+        <h2>ZADATAK 8</h2>
+        <div class="container7">
+            <div class="item7 aaaa">1</div>
+            <div class="item7 bbbb">2</div>
+            <div class="item7 aaaa">3</div>
+            <div class="item7 dddd">4</div>
+            <div class="item7 aaaa">5</div>
+            <div class="item7 ffff">6</div>
+            <div class="item7 aaaa">7</div>
+            <div class="item7 hhh">8</div>
+            <div class="item7 aaaa">9</div>
+            <div class="item7 jjj">10</div>
+            <div class="item7 aaaa">11</div>
+            <div class="item7 lll">12</div>
+    </div>
+</body>
+</html>
