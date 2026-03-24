@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmovi</title>
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico"> 
     <style>
 body {
   margin: 0;
@@ -23,7 +24,9 @@ ul {
   overflow: hidden;
   background-color: #1656AD;
 }
-
+.active{
+  background-color: darkblue;
+}
 ul li {
   float: left;
 }
@@ -34,43 +37,39 @@ ul li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
+} 
 
 ul li a:hover:not(.active) {
   background-color: #111111;
 }
+.grid{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
-.filmovi{
-      background-color: darkblue;
+    gap: 20px;
+    padding: 20px;
 }
-        .grid{
-            display: grid;
-            margin-top: 10px;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-
-            gap: 20px;
-            padding: 20px;
-        }
-        .mjesto{
-            background-color: #333;
-            height: 400px;
-            width: 290px;
-            border-radius: 5%;
-            border: 2px solid #1656AD;
-        }
-        .mjesto:hover{
-            border: 2px solid aqua;
-        }
-        .a{
-            background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6KErczPBRO9FZqAq7jH8cR1jY9.jpg");
-            background-size: cover;
-        }
+.mjesto{
+    background-color: #333;
+    height: 400px;
+    width: 290px;
+    border-radius: 5%;
+    border: 2px solid #1656AD;
+}
+.mjesto:hover{
+    border: 2px solid aqua;
+}
+.a{
+    background-image: url("https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6KErczPBRO9FZqAq7jH8cR1jY9.jpg");
+    background-size: cover;
+}
     </style>
 </head>
 <body>
 <ul>
-        <li><a href="#home" class="active">MOVIEWIND</a></li>
-        <li style="float:right"><a href="index.html" class="filmovi">Filmovi</a></li>
+        <li><a href="index.html" class="active">MOVIEWIND</a></li>
+        <li style="float:right"><a href="filmovi.html" class="filmovi">Filmovi</a></li>
         <li style="float:right"><a href="igrice.html" class="igrice">Igrice</a></li>
         <li style="float:right"><a href="zanrovi.html" class="serije">Serije</a></li>
 </ul>
@@ -115,7 +114,84 @@ ul li a:hover:not(.active) {
     <a href="https://www.imdb.com/title/tt0071562/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/amvmeQWheahG3StKwIE1f7jRnkZ.jpg'); background-size:cover;"></a>
 
     <a href="https://www.imdb.com/title/tt0209144/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/fKTPH2WvH8nHTXeBYBVhawtRqtR.jpg'); background-size:cover;"></a>
+      <a href="https://www.imdb.com/title/tt0944947/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg'); background-size:cover;"></a>
 
+<a href="https://www.imdb.com/title/tt0903747/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt1475582/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt7366338/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/jC15hrcDDRRHc7ccut8njN6mnJh.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0108778/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/f496cm9enuEsZkSPzCwnTESEK5s.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt4574334/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/34OGjFEbHj0E3lE2w0iTUVq0CBz.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2306299/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/bQLrHIRNEkE3PdIWQrZHynQZazu.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0386676/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/qWnJzyZhyy74gjpSjIXWmuk0ifX.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0411008/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/og6S0aTZU6YUJAbqxeKjCa3kY1E.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0141842/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/rTc7ZXdroqjkKivFPvCPX0Ru7uw.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0773262/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/q8dWfc4JwQuv3HayIZeO84jAXED.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2442560/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt5180504/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/9yxep7oJdkj3Pla9TD9gKflRApY.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt3322312/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/oCDBwSkntYamuw8VJIxMRCtDBmi.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt8111088/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt3032476/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/2zmTngn1tYC1AvfnrFLhxeD82hz.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2085059/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/4UjiPdFKJGJYdxwRs2Rzg7EmWqr.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2861424/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/8PCPic1JRgfAnDx37VJR0qrU2Ab.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt4052886/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/ekZobS8isE6mA53RAiGDG93hBxL.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0203259/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/iofokHZoUB4Qhik4PflvJl8TT6a.jpg'); background-size:cover;"></a>
+<a href="https://www.imdb.com/title/tt5838588/" target="_blank" class="mjesto" style="background-image:url('https://cdn1.epicgames.com/offer/3ddd6a590da64e3686042d108968a6b2/EGS_GodofWar_SantaMonicaStudio_S2_1200x1600-fbdf3cbc2980749091d52751ffabb7b7_1200x1600-fbdf3cbc2980749091d52751ffabb7b7'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2140553/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/dmo6TYuuJgaYinXBPjrgG9mB5od.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2993508/" target="_blank" class="mjesto" style="background-image:url('https://image.api.playstation.com/vulcan/ap/rnd/202211/0715/kCJvjB0y1X2eZccJwjIFb4WP.png'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt1477834/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/z7RAebqk6IczWFbXWW4KDIkfZgj.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt15399898/?ref_=sr_t_12" target="_blank" class="mjesto" style="background-image:url('https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/56bda8181540611.651da1632a783.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2103188/" target="_blank" class="mjesto" style="background-image:url('https://cdn.mobygames.com/covers/1648011-grand-theft-auto-v-xbox-one-front-cover.png'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt1520211/" target="_blank" class="mjesto" style="background-image:url('https://www.fibra.hr/ZM_FB_1.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt12497042/?ref_=sr_t_15" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/h89NFl1jFzr9GQ6yCf9JMnNVS7x.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0398269/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt10562854/?ref_=sr_t_22" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/3ApvUAl0aw6TKKLkJH3IrEzPpIf.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt33309006/?ref_=mv_close" target="_blank" class="mjesto" style="background-image:url('https://static0.polygonimages.com/wordpress/wp-content/uploads/sharedimages/2025/06/resident-evil-requiem-tag-page-cover-art.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt3554580/?ref_=sr_t_30" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/ukYGflcuqkRTF5zJ3F7bVGVLSw3.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt6161168/?ref_=sr_t_5" target="_blank" class="mjesto" style="background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e5d6f175-3a2e-493d-b7f2-5f70852b4f2e/dermu4d-3d22a435-f639-4fc5-864d-0c78ac450eff.jpg/v1/fill/w_683,h_1171,q_70,strp/red_dead_redemption_2_game_cover_by_love_myart_dermu4d-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjE5NSIsInBhdGgiOiIvZi9lNWQ2ZjE3NS0zYTJlLTQ5M2QtYjdmMi01ZjcwODUyYjRmMmUvZGVybXU0ZC0zZDIyYTQzNS1mNjM5LTRmYzUtODY0ZC0wYzc4YWM0NTBlZmYuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.IEFmIALxJhUthrr1pwdMdWUp-5Z-Hsc_XILLQcoBa8I'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt5807780/?ref_=sr_t_13" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w600_and_h900_face/wXthtEN5kdWA1bHz03lkuCJS6hA.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt21047286/?ref_=sr_t_11" target="_blank" class="mjesto" style="background-image:url('https://i.ebayimg.com/images/g/EcMAAOSwhQJkAlal/s-l1200.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt5158314/?ref_=sr_t_9" target="_blank" class="mjesto" style="background-image:url('https://image.api.playstation.com/vulcan/img/rnd/202010/2119/6qpYZ2v5JGHcaFAcT3JYEXYd.png'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt0464029/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt1843866/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/9yxep7oJdkj3Pla9TD9gKflRApY.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt3810192/?ref_=sr_t_8" target="_blank" class="mjesto" style="background-image:url('https://images.igdb.com/igdb/image/upload/t_1080p/co1rft.jpg'); background-size:cover;"></a>
+
+<a href="https://www.imdb.com/title/tt2993508/" target="_blank" class="mjesto" style="background-image:url('https://image.tmdb.org/t/p/w500/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg'); background-size:cover;"></a>
 </div>
 </body>
 </html>
