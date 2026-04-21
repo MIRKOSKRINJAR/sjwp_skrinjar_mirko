@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* COLORS */
+.header { background: #0b132b; color: white; }
+.menu   { background: #ef233c; color: white; }
+.hero   { background: #4f83b6; color: white; }
+.main   { background: #2b3a55; color: white; }
+.banner { background: #f2c96b; }
+.extra  { background: #52b788; }
+.image  { background: #a8c7c9; }
+
+/* MOBILE (default) */
+.container {
+  grid-template-areas:
+    "header"
+    "menu"
+    "hero"
+    "main"
+    "banner"
+    "extra"
+    "image";
+  grid-template-columns: 1fr;
+}
+
+.header { grid-area: header; }
+.menu   { grid-area: menu; }
+.hero   { grid-area: hero; }
+.main   { grid-area: main; }
+.banner { grid-area: banner; }
+.extra  { grid-area: extra; }
+.image  { grid-area: image; }
+
+/* TABLET */
+@media (min-width: 600px) {
+  .container {
+    grid-template-areas:
+      "header header header"
+      "hero   hero hero"
+      "menu   main main"
+      "menu   banner banner"
+      "menu   extra image";
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 900px) {
+  .container {
+    grid-template-areas:
+      "header menu menu"
+      "hero   hero hero"
+      "main   .     image"
+      "main   .     extra"
+      "banner banner banner";
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+    </style>
+</head>
+<body>
+<div class="container">
+  <div class="box header">HEADER</div>
+  <div class="box menu">MENU</div>
+  <div class="box hero">HERO</div>
+  <div class="box main">MAIN</div>
+  <div class="box banner">BANNER</div>
+  <div class="box extra">EXTRA</div>
+  <div class="box image">IMAGE</div>
+</div>
+</body>
+</html>

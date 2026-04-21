@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .a1 { background: #f16c6c; }
+  .a2 { background: white; }
+  .a3 { background: #f39a4a; }
+  .a4 { background: green; }
+  .a5 { background: blue; } 
+
+  .container {
+    grid-template-areas:
+      "a1"
+      "a2"
+      "a3"
+      "a4"
+      "a5";
+    grid-template-columns: 1fr;
+  }
+
+  .a1 { grid-area: a1; }
+  .a2 { grid-area: a2; }
+  .a3 { grid-area: a3; }
+  .a4 { grid-area: a4; }
+  .a5 { grid-area: a5; }
+
+ /* Tablet */
+@media (min-width: 600px) {
+  .container {
+    grid-template-areas:
+      "a1 a1"
+      "a2 a2"
+      "a3 a4"
+      "a5 a5";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+  .container {
+    grid-template-areas:
+      "a1 a1 a1"
+      "a3 a2 a4"
+      "a5 a5 a5";
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <div class="box a1">Header</div>
+  <div class="box a2">Main</div>
+  <div class="box a3">Left</div>
+  <div class="box a4">Right</div>
+  <div class="box a5">Footer</div>
+</div>
+
+</body>
+</html>
