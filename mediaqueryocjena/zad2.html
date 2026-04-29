@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zadatak 2</title>
+<style>
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+}
+.proizvod{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(min-width: 768px){
+    .a{
+        grid-column: span 3;
+        grid-row: 1;
+        width: 100%;
+        background-color: purple;
+    }
+    .b{
+        grid-column: 1;
+        grid-row: span 2;
+        width: 100%;
+        height: 100%;
+        background-color: green;
+    }
+    .c{
+        grid-column: span 2;
+        grid-row: span 2;
+        width: 100%;
+        height: 100%;
+        background-color: yellow;
+    }
+    .d{
+        grid-column: span 3;
+        grid-row: 4;
+        width: 100%;
+        background-color: blue;
+    }
+}
+@media(max-width: 767px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+    .a{
+        width: 100vw;
+        background-color: purple
+    }
+    .b{
+        width: 100vw;
+        background-color: green;
+    }
+    .c{
+        width: 100vw;
+        background-color: yellow;
+    }
+    .d{
+        width: 100vw;
+        background-color: blue;
+    }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="proizvod a">header</div>
+    <div class="proizvod b">sidebar</div>
+    <div class="proizvod c">main</div>
+    <div class="proizvod d">footer</div>
+</div>
+</body>
+</html>
+
+
