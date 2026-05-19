@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moja Osobna Web Stranica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+<style>
+
+/* ── Varijable ── */
+:root {
+  --accent: #e8552d;
+  --accent-light: #ff7a57;
+  --dark: #0f0f0f;
+  --dark2: #1a1a1a;
+  --dark3: #242424;
+  --light: #f8f5f0;
+  --light2: #ede9e3;
+  --text-muted: #888;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius: 16px;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--light);
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ═══════════════ NAVBAR ═══════════════ */
+#mainNav {
+  background: transparent;
+  transition: background var(--transition), box-shadow var(--transition);
+  padding: 1.2rem 0;
+}
+#mainNav.scrolled {
+  background: rgba(15,15,15,0.96);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.3);
+  padding: 0.7rem 0;
+}
+.navbar-brand {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: #fff !important;
+  letter-spacing: -1px;
+}
+.navbar-brand .accent { color: var(--accent); }
+
+.nav-link {
+  color: rgba(255,255,255,0.8) !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 8px;
+  transition: color var(--transition), background var(--transition);
+}
+.nav-link:hover, .nav-link.active {
+  color: #fff !important;
+  background: rgba(255,255,255,0.08);
+}
+.btn-contact {
+  background: var(--accent) !important;
+  color: #fff !important;
+  border-radius: 50px !important;
+  padding: 0.4rem 1.2rem !important;
+}
+.btn-contact:hover {
+  background: var(--accent-light) !important;
+}
+
+/* ═══════════════ HERO ═══════════════ */
+#hero {
+  min-height: 100vh;
+  background: var(--dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 60% at 70% 50%, rgba(232,85,45,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(232,85,45,0.08) 0%, transparent 60%);
+}
+.hero-text { position: relative; z-index: 2; }
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.0;
+  margin-bottom: 1rem;
+}
+.accent-text { color: var(--accent); }
+.hero-sub {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.5px;
+}
+.btn-primary-custom {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.btn-primary-custom:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,85,45,0.35);
+  color: #fff;
+}
+.btn-outline-custom {
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+}
+.btn-outline-custom:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Profile image */
+.profile-frame {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+.profile-img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(255,255,255,0.1);
+  display: block;
+  margin: auto;
+  background: #2a2a2a;
+}
+.profile-ring {
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 2px dashed rgba(232,85,45,0.4);
+  animation: spin 20s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,0.3);
+  font-size: 1.4rem;
+  animation: bounce 2s infinite;
+  z-index: 2;
+}
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ═══════════════ SECTIONS ═══════════════ */
+.section-light { background: var(--light); padding: 6rem 0; }
+.section-dark { background: var(--dark2); padding: 6rem 0; }
+
+.section-header { margin-bottom: 3rem; }
+.section-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.section-tag.light { color: var(--accent-light); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  color: var(--dark);
+  margin: 0;
+}
+.section-title.light { color: #fff; }
+
+/* ═══════════════ O MENI ═══════════════ */
+.info-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.07);
+  height: 100%;
+}
+.info-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.lead-text {
+  font-size: 1.05rem;
+  color: var(--dark);
+  font-weight: 500;
+  line-height: 1.6;
+}
+.info-card p { color: #555; line-height: 1.8; }
+
+.info-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  background: var(--light2);
+  padding: 0.3rem 0.9rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: var(--dark);
+  font-weight: 500;
+}
+.chip i { color: var(--accent); margin-right: 4px; }
+
+.stat-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.8rem 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform var(--transition);
+}
+.stat-card:hover { transform: translateY(-4px); }
+.accent-stat { background: var(--dark); }
+.accent-stat .stat-number,
+.accent-stat .stat-label { color: #fff; }
+.stat-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+.stat-label {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+/* ═══════════════ HOBIJI ═══════════════ */
+.hobi-block {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 3rem;
+}
+.hobi-block:last-child { border-bottom: none; padding-bottom: 0; }
+
+.hobi-card {
+  background: var(--dark3);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.05);
+  height: 100%;
+  transition: transform var(--transition), border-color var(--transition);
+}
+.hobi-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+.hobi-card-2 { background: #1e1a2e; }
+.hobi-card-3 { background: #1a2220; }
+.hobi-icon {
+  font-size: 2.8rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.hobi-card h3 { color: #fff; font-family: var(--font-display); font-size: 1.4rem; }
+.hobi-badge {
+  display: inline-block;
+  background: rgba(232,85,45,0.15);
+  color: var(--accent);
+  border: 1px solid rgba(232,85,45,0.3);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.8rem;
+  margin: 0;
+}
+.hobi-content { color: rgba(255,255,255,0.75); }
+.hobi-content h4 {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.hobi-content p { line-height: 1.85; margin-bottom: 0.8rem; font-size: 0.95rem; }
+.hobi-content strong { color: var(--accent-light); }
+.hobi-content em { color: rgba(255,255,255,0.9); font-style: italic; }
+
+.game-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.game-tag {
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.7rem;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════════ VJEŠTINE ═══════════════ */
+.skill-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+.skill-card h5 { font-size: 0.95rem; font-weight: 600; margin: 0.8rem 0 0.5rem; color: var(--dark); }
+
+.skill-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+.skill-icon.html { background: #fff4f0; color: #e34f26; }
+.skill-icon.css  { background: #f0f4ff; color: #264de4; }
+.skill-icon.js   { background: #fffbf0; color: #f0db4f; filter: brightness(0.85); }
+.skill-icon.bs   { background: #f5f0ff; color: #7952b3; }
+.skill-icon.git  { background: #fff0f5; color: #f05133; }
+.skill-icon.py   { background: #f0f8ff; color: #3572a5; }
+.skill-icon.sql  { background: #f0fff4; color: #336791; }
+.skill-icon.figma { background: #fff5f5; color: #f24e1e; }
+
+.skill-bar {
+  background: var(--light2);
+  height: 6px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0.5rem 0 0.3rem;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  border-radius: 50px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+.skill-pct { font-size: 0.8rem; color: var(--text-muted); }
+
+/* ═══════════════ ZADAĆE ═══════════════ */
+.zadaca-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--dark3);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.zadaca-card:hover {
+  border-color: var(--accent);
+  background: rgba(232,85,45,0.08);
+  color: #fff;
+  transform: translateX(4px);
+}
+.zadaca-card.active-zadaca {
+  border-color: var(--accent);
+  background: rgba(232,85,45,0.12);
+}
+.zadaca-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--accent);
+  min-width: 2.5rem;
+  line-height: 1;
+}
+.zadaca-card h6 { color: #fff; margin: 0 0 0.2rem; font-size: 0.9rem; }
+.zadaca-card p { margin: 0; font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+.zadaca-card i { margin-left: auto; font-size: 1.3rem; color: var(--accent); opacity: 0.6; }
+.zadaca-card:hover i { opacity: 1; }
+
+/* ═══════════════ KONTAKT FORMA ═══════════════ */
+.contact-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.1);
+}
+.form-label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 0.4rem;
+}
+.req { color: var(--accent); }
+
+.custom-input {
+  background: var(--light);
+  border: 1.5px solid var(--light2);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--dark);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.custom-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(232,85,45,0.12);
+  background: #fff;
+  outline: none;
+}
+.custom-input::placeholder { color: #bbb; }
+
+.btn-submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-submit:hover {
+  background: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232,85,45,0.35);
+  color: #fff;
+}
+
+/* Contact info sidebar */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
+.contact-info-item i {
+  font-size: 1.3rem;
+  color: var(--accent);
+  margin-top: 2px;
+  min-width: 1.3rem;
+}
+.contact-info-item h6 { margin: 0 0 0.2rem; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
+.contact-info-item p { margin: 0; font-size: 0.9rem; color: var(--dark); }
+
+/* ═══════════════ FOOTER ═══════════════ */
+.site-footer {
+  background: var(--dark);
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.site-footer p { color: rgba(255,255,255,0.35); font-size: 0.85rem; margin: 0; }
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #fff;
+}
+.footer-brand .accent { color: var(--accent); }
+.footer-icon {
+  color: rgba(255,255,255,0.4);
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  transition: color var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+.footer-icon:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .profile-img { width: 200px; height: 200px; }
+  #hero { padding-top: 6rem; }
+  .section-light, .section-dark { padding: 4rem 0; }
+  .contact-card { padding: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Ivan<span class="accent">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="#hero">Početna</a></li>
+          <li class="nav-item"><a class="nav-link" href="#o-meni">O meni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobiji">Hobiji</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vjestine">Vještine</a></li>
+          <li class="nav-item"><a class="nav-link" href="#zadace">Zadaće</a></li>
+          <li class="nav-item"><a class="nav-link btn-contact" href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero-->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="container h-100 d-flex align-items-center">
+      <div class="row align-items-center g-5 w-100">
+        <div class="col-lg-7 hero-text" data-aos="fade-right">
+          <span class="hero-eyebrow">Zdravo, ja sam</span>
+          <h1 class="hero-title">Ivan<br/><span class="accent-text">Horvat</span></h1>
+          <p class="hero-sub">Student informatike · Gamer · Entuzijast tehnologije</p>
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <a href="#o-meni" class="btn btn-primary-custom">Saznaj više <i class="bi bi-arrow-down"></i></a>
+            <a href="#kontakt" class="btn btn-outline-custom">Kontaktiraj me</a>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center" data-aos="fade-left">
+          <div class="profile-frame">
+            <img src="https://api.dicebear.com/8.x/adventurer/svg?seed=Ivan&backgroundColor=b6e3f4" alt="Profilna slika" class="profile-img"/>
+            <div class="profile-ring"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint"><i class="bi bi-chevron-double-down"></i></div>
+  </section>
+
+  <!--O meni-->
+  <section id="o-meni" class="section-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Tko sam ja?</span>
+        <h2 class="section-title">O meni</h2>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <div class="info-card">
+            <h3>Ivan Horvat</h3>
+            <p class="lead-text">Student 2. godine preddiplomskog studija Informatike na Tehničkom veleučilištu.</p>
+            <p>Živim u Zagrebu i strastveni sam o tehnologiji od malih nogu. Uz fakultetske obaveze, slobodno vrijeme provodim igrajući video igre, gledajući animirane serije i razvijajući male web projekte.</p>
+            <p>Posebno me zanima razvoj web aplikacija i UI/UX dizajn. Vjerujem da dobro dizajnirano sučelje može promijeniti iskustvo korisnika iz frustracije u zadovoljstvo.</p>
+            <div class="info-chips mt-3">
+              <span class="chip"><i class="bi bi-geo-alt-fill"></i> Zagreb, Hrvatska</span>
+              <span class="chip"><i class="bi bi-mortarboard-fill"></i> Informatika</span>
+              <span class="chip"><i class="bi bi-laptop-fill"></i> Web dev</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="stat-card">
+                <span class="stat-number">2+</span>
+                <span class="stat-label">Godine studiranja</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card accent-stat">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Projekata</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card accent-stat">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Sati gaminga</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <span class="stat-number">∞</span>
+                <span class="stat-label">Kava dnevno</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobi -->
+  <section id="hobiji" class="section-dark">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag light">Što volim raditi</span>
+        <h2 class="section-title light">Moji Hobiji</h2>
+      </div>
+      <div class="hobi-block mb-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-4">
+            <div class="hobi-card">
+              <div class="hobi-icon"><i class="bi bi-controller"></i></div>
+              <h3>Video Igre</h3>
+              <p class="hobi-badge">Strast #1</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="hobi-content">
+              <h4>The Witcher 3: Wild Hunt – moja omiljena igra svih vremena</h4>
+              <p>Ako me pitate koja je jedna igra koja me je apsolutno zaokupila, bez razmišljanja kažem – <strong>The Witcher 3: Wild Hunt</strong>. Ova RPG igra razvijačke kuće CD Projekt Red postala je remek-djelo moderne industrije video igara i razlog zašto toliko cijenim ovaj medij.</p>
+              <p>Igrao sam je više od <strong>200 sati</strong> na prvom playthrough-u i ni sekunde nisam požalio. Svijet Divljine ispunjen je živim likovima, složenim moralnim izborima i pričama koje vas emocionalno pogode. Nije ovo igra gdje ubijate neprijatelje i skupljate zlato – ovdje svaki quest ima dušu. Krvlju i vinom je DLC koji je bolji od većine punih igara koje sam ikad igrao.</p>
+              <p>Ono što me posebno fascinira je kako CD Projekt Red nije stvorio samo igricu, već cijeli živi svijet. Stanovnici imaju rasporede, vremenske prilike mijenjaju atmosferu, a vaše odluke stvarno mijenjaju tijek događaja. Geralt od Rivije je lik s kojim sam se identificirao – cynican, ali u srži dobar čovjek koji se bori u sivim zonama morala.</p>
+              <div class="game-tags mt-3">
+                <span class="game-tag">RPG</span>
+                <span class="game-tag">Open World</span>
+                <span class="game-tag">Story-driven</span>
+                <span class="game-tag">10/10</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hobi-block mb-5">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-4">
+            <div class="hobi-card hobi-card-2">
+              <div class="hobi-icon"><i class="bi bi-play-circle-fill"></i></div>
+              <h3>Anime Serije</h3>
+              <p class="hobi-badge">Strast #2</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="hobi-content">
+              <h4>Attack on Titan – priča koja mijenja perspektivu</h4>
+              <p><strong>Attack on Titan (Shingeki no Kyojin)</strong> je anime koji sam počeo gledati skepičan – "pa to je samo crtić gdje divovi jedu ljude" – i završio potpuno shrvan zadnjom sezonom. Nikad nisam mislio da će animirana serija natjerati me da razmišljam o slobodi, determinizmu i moralu rata na ovako dubokoj razini.</p>
+              <p>Ono što čini AoT posebnim je njegova sposobnost da preokrenuti sve što ste mislili da znate. Protagonisti postaju antagonisti, heroji imaju mane, a "zlikovci" imaju razumljive motive. Autor Hajime Isayama stvorio je narativ koji se vijuga kroz desetljeća priče bez gubitka napetosti.</p>
+              <p>Finalna sezona je kontroverzna među fanovima, ali ja sam je volio upravo zbog njene hrabrosti da ne da jednostavan odgovor. Rumbling arc je jedna od najsmjelijih priča u modernoj animaciji – prikazuje kako čak i s pravom namjerom možete postati monster.</p>
+              <p>Osim AoT, redovito pratim: <em>Jujutsu Kaisen, Demon Slayer, Vinland Saga</em> i <em>Mushishi</em> za opuštanje.</p>
+              <div class="game-tags mt-3">
+                <span class="game-tag">Drama</span>
+                <span class="game-tag">Action</span>
+                <span class="game-tag">Filozofija</span>
+                <span class="game-tag">Masterpiece</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobi-block">
+        <div class="row g-4 align-items-start">
+          <div class="col-md-4">
+            <div class="hobi-card hobi-card-3">
+              <div class="hobi-icon"><i class="bi bi-code-slash"></i></div>
+              <h3>Web Razvoj</h3>
+              <p class="hobi-badge">Strast #3</p>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="hobi-content">
+              <h4>Stvaranje web iskustava od nule</h4>
+              <p>Programiranje sam počeo u 15. godini kao hobi – htio sam napraviti web stranicu za guild u igri. Od tada do danas, taj hobi prerastao je u ozbiljnu strast i potencijalni karijerni put.</p>
+              <p>Posebno me zanima spoj vizualnog dizajna i funkcionalne logike. Kada nešto što sam napisao postane lijepo i funkcionalno sučelje, dobivam osjećaj koji teško opisujem – kombinacija ponosa i čuđenja da je to moguće.</p>
+              <p>Trenutno učim <strong>React</strong> i <strong>Node.js</strong>, a dugoročno me zanima full-stack razvoj s fokusom na korisničko iskustvo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Vjestine-->
+  <section id="vjestine" class="section-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Što znam raditi</span>
+        <h2 class="section-title">Vještine</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon html"><i class="bi bi-filetype-html"></i></div>
+            <h5>HTML5</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+            <span class="skill-pct">85%</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon css"><i class="bi bi-filetype-css"></i></div>
+            <h5>CSS3</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+            <span class="skill-pct">75%</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon js"><i class="bi bi-filetype-js"></i></div>
+            <h5>JavaScript</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+            <span class="skill-pct">60%</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon bs"><i class="bi bi-bootstrap-fill"></i></div>
+            <h5>Bootstrap</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
+            <span class="skill-pct">70%</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon git"><i class="bi bi-git"></i></div>
+            <h5>Git / GitHub</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+            <span class="skill-pct">65%</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon py"><i class="bi bi-filetype-py"></i></div>
+            <h5>Python</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
+            <span class="skill-pct">50%</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon sql"><i class="bi bi-database-fill"></i></div>
+            <h5>SQL</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:55%"></div></div>
+            <span class="skill-pct">55%</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card">
+            <div class="skill-icon figma"><i class="bi bi-vector-pen"></i></div>
+            <h5>Figma</h5>
+            <div class="skill-bar"><div class="skill-fill" style="width:45%"></div></div>
+            <span class="skill-pct">45%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Zadace -->
+  <section id="zadace" class="section-dark">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag light">Moj rad</span>
+        <h2 class="section-title light">Popis Zadaća</h2>
+      </div>
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <a href="zadaca1/index.html" class="zadaca-card">
+            <span class="zadaca-num">01</span>
+            <div>
+              <h6>Zadaća 1</h6>
+              <p>HTML osnove – struktura stranice</p>
+            </div>
+            <i class="bi bi-arrow-right-circle"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="zadaca2/index.html" class="zadaca-card">
+            <span class="zadaca-num">02</span>
+            <div>
+              <h6>Zadaća 2</h6>
+              <p>CSS stilizacija i box model</p>
+            </div>
+            <i class="bi bi-arrow-right-circle"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="zadaca3/index.html" class="zadaca-card">
+            <span class="zadaca-num">03</span>
+            <div>
+              <h6>Zadaća 3</h6>
+              <p>Responzivni dizajn s Flexbox</p>
+            </div>
+            <i class="bi bi-arrow-right-circle"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="zadaca4/index.html" class="zadaca-card">
+            <span class="zadaca-num">04</span>
+            <div>
+              <h6>Zadaća 4</h6>
+              <p>JavaScript i DOM manipulacija</p>
+            </div>
+            <i class="bi bi-arrow-right-circle"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="zadaca5/index.html" class="zadaca-card">
+            <span class="zadaca-num">05</span>
+            <div>
+              <h6>Zadaća 5</h6>
+              <p>Bootstrap komponente</p>
+            </div>
+            <i class="bi bi-arrow-right-circle"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="index.html" class="zadaca-card active-zadaca">
+            <span class="zadaca-num">06</span>
+            <div>
+              <h6>Zadaća 6</h6>
+              <p>Osobna web stranica (ova stranica)</p>
+            </div>
+            <i class="bi bi-check-circle-fill"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Contact -->
+  <section id="kontakt" class="section-light">
+    <div class="container">
+      <div class="section-header text-center mb-5">
+        <span class="section-tag">Javite se</span>
+        <h2 class="section-title">Kontaktirajte Nas</h2>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-card">
+            <form action="#" method="GET" novalidate>
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="ime" class="form-label">Ime i prezime <span class="req">*</span></label>
+                  <input type="text" class="form-control custom-input" id="ime" name="ime" placeholder="Ivan Horvat" required/>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email adresa <span class="req">*</span></label>
+                  <input type="email" class="form-control custom-input" id="email" name="email" placeholder="ivan@mail.com" required/>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="poruka" class="form-label">Vaša poruka <span class="req">*</span></label>
+                <textarea class="form-control custom-input" id="poruka" name="poruka" rows="5" placeholder="Napišite svoju poruku ovdje..." required></textarea>
+              </div>
+              <div class="mb-4">
+                <label for="datum" class="form-label">Preferirani datum kontakta</label>
+                <input type="date" class="form-control custom-input" id="datum" name="datum"/>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-submit">
+                  <i class="bi bi-send-fill me-2"></i>Pošalji Poruku
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Infobar -->
+        <div class="col-lg-4 mt-4 mt-lg-0">
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <h6>Email</h6>
+                <p>ivan.horvat@student.tvz.hr</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="bi bi-github"></i>
+              <div>
+                <h6>GitHub</h6>
+                <p>github.com/ihorvat</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="bi bi-linkedin"></i>
+              <div>
+                <h6>LinkedIn</h6>
+                <p>linkedin.com/in/ihorvat</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <h6>Lokacija</h6>
+                <p>Zagreb, Hrvatska</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Fotter-->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <span class="footer-brand">Ivan<span class="accent">.</span></span>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <p class="mb-0">© 2025 Ivan Horvat. Sva prava pridržana.</p>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <a href="https://github.com/ihorvat" class="footer-icon"><i class="bi bi-github"></i></a>
+          <a href="https://linkedin.com/in/ihorvat" class="footer-icon"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:ivan.horvat@student.tvz.hr" class="footer-icon"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('mainNav');
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Smooth active link
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+      });
+      navLinks.forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+      });
+    });
+
+    // Skillbar
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.skill-fill').forEach(b => {
+            b.style.width = b.style.width;
+          });
+          e.target.classList.add('animated');
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('#vjestine').forEach(s => observer.observe(s));
+  </script>
+</body>
+</html>

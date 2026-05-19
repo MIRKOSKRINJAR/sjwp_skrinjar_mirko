@@ -1,409 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Moja Web Stranica">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Mirko Skrinjar">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skriptni jezici</title>
-    <!-- INTERNAL CSS -->
-    <style>
-      .drugi{
-        color:aliceblue;
-      }
-    </style>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8" />
+  <meta name="description" content="Moja Osobna Web Stranica">
+  <meta name="keywords" content="HTML, CSS, Bootstrap, Mirko Skrinjar">
+  <meta name="author" content="Mirko Skrinjar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moja osobna stranica</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>ZADACA:</h1>
-  <ol><li><a href="zadace/zadaca1.html" target="_blank">Zadaca1</a></li>
-  <li><a href="zadace/zadaca2.html" target="_blank">Zadaca2</a></li>
-  <li><a href="zadace/zadaca3/index.html" target="_blank">Zadaca3</a></li>
-  <li><a href="zadace/zadaca4.html" target="_blank">Zadaca4</a></li>
-  <li><a href="zadace/zadaca5.html" target="_blank">Zadaca5</a></li>
-  <li><a href="zadace/zadaca6.html" target="_blank">Zadaca6</a></li>
-  <li><a href="forms/zivotopis.html" target="_blank">Zivotopis</a></li></ol>
-  <h2>Dodavanje CSS-a</h2>
-    <!-- 3 nacina dodavanja css-a -->
-     <ul>
-      <li style ="color:blue;background-color: aliceblue;">INLINE</li>
-      <li class="drugi">INTERNAL</li>
-      <li class="treci">EXTERNAL</li>
-     </ul>
-<!--   heading elementi 
-     <h1>Naslov 1 MIRKO</h1>
-     <h2>Naslov 2 MIRKO</h2>
-     <h3>Naslov 3 MIRKO</h3>
-     <h4>Naslov 4 MIRKO</h4>
-     <h5>Naslov 5 MIRKO</h5>
-     <h6>Naslov 6 MIRKO</h6>
-      paragraf element, break element <br>, <hr> element
-      <p>Lorem ipsum dolor sit amet consectetur <br> <hr>adipisicing elit. Voluptatum alias doloremque, officia ad deleniti 
-      quas esse quam quos eaque minima placeat autem assumenda dolore similique commodi nobis totam quidem corporis.
-      Suscipit explicabo eveniet corporis doloremque accusamus nisi! Velit accusamus quidem repudiandae voluptatum 
-      corrupti quasi, neque quod nostrum possimus error ullam aliquam placeat, dolores temporibus optio quis. Fugiat vero eius repellat?</p>
 
-    <h1>NAJBOLJI FILMOVI</h1>
-    <br>
-    <h2>TOP 3 FILMA</h2>
-    <hr>
-    <h3>1. STAR WARS</h3>
-    <p>moj osobito najdrazi film</p>
-    <h3>2. BREAKING BAD</h3>
-    <p>najbolji film</p>
-    <h3>3.PISONJA</h3>
-    <p>najbolji film</p> -->
-    <!-- Oblikovanje teksta -->
-    <p>Mi smo <strong>3.E</strong> razred. Idemo u <em>Tehnicku skolu</em>. <mark>Razrednik</mark> nam je <sub>Ivan</sub><sup>Benic</sup>. Ima nas <del>24</del> 26 u razredu.</p>
-    <pre>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      Ea numquam debitis fugit tempora autem dolorem eum? 
-      Rerum, debitis. Voluptatibus et sit explicabo suscipit atque animi quo optio, quis a expedita!
-    </pre> 
-
-    <!-- LISTE, ul - unordered liste, ol - ordered liste, dl - definition liste -->
-    <h2>VOCNI DESERT U CASI</h2>
-    <hr>
-    <h3 id="naslov">SASTOJCI:</h3>
-    <ul type = "circle">
-      <li>230 g kreme za kremšnite</li>
-      <li>500 ml hladnog mlijeka</li>
-      <li>3-4 žlice pekmeza od višanja</li>
-    </ul>
-    <hr>
-    <h3>PRIPREMA</h3>
-    <ol type = "1">
-      <li>Prah za kremu pomiješati sa pola litre hladnog mlijeka te miksati 2-3 minute dok se ne dobije jednolična krema</li>
-      <li>Pekmez od višanja rastopiti na blagoj vatri i ohladiti</li>
-      <li>U desertne čaše rasporediti sloj pripremljene kreme pa žlicu i pol voćnog nadjeva te ponoviti još jednom postupak i završiti sa voćnim slojem. Posipati nasjeckanim pistacijem i staviti u hladnjak na hlađenje.</li>
-    </ol>
-    <h2>DEFINITION LISTE</h2>
-    <hr>
-    <df>
-      <dl>
-        <dt>Struja</dt>
-        <dd>Usmjereno gibanje elektrona kroz vodic</dd>
-        <dt>Napon</dt>
-        <dd>Razlika potencijala izmedu dvije tocke</dd>
-      </dl>
-    </df>
-    <h2>NESTED LISTE</h2>
-    <hr>
-    <ul>
-      <li>A</li>
-      <li>B</li>
-      <ol>
-        <li>B1</li>
-        <li>B2</li>
-        <ul>
-          <li>B2a</li>
-          <ul>
-            <li>B2aa</li>
-            <li>B2ab</li>
-          </ul>
-          <li>B2b</li>
-          <li>B2c</li>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Mirko Skrinjar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#o-meni">O meni</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hobiji">Hobiji</a></li>
+          <li class="nav-item"><a class="nav-link" href="#vjestine">Vjestine</a></li>
+          <li class="nav-item"><a class="nav-link" href="#zadace">Zadace</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
         </ul>
-        <li>B3</li>
-        <ol>
-          <li>B31</li>
-          <li>B32</li>
-        </ol>
-      </ol>
-      <li>C</li>
-    </ul>
-    <p draggable="true">
-      <br>
-      <p>This is the first sentence.
-  <small>This whole sentence is in small letters.</small>
-</p>
-<p>
-  When the process is complete, the utility will output the text
-  <samp>Scan complete. Found <em>N</em> results.</samp> You can then proceed to
-  the next step.
-</p>
-<ins>This text has been inserted</ins>
-<blockquote cite="https://datatracker.ietf.org/doc/html/rfc1149">
-  <p>
-    Avian carriers can provide high delay, low throughput, and low altitude
-    service. The connection topology is limited to a single point-to-point path
-    for each carrier, used with standard carriers, but many carriers can be used
-    without significant interference with each other, outside early spring. This
-    is because of the 3D ether space available to the carriers, in contrast to
-    the 1D ether used by IEEE802.3. The carriers have an intrinsic collision
-    avoidance system, which increases availability.
-  </p>
-</blockquote>
-<details>
-  <summary>Details</summary>
-  Something small enough to escape casual notice.
-</details>
-<br>
-<h2>LEARNING WEB DEVELOPMENT</h2>
-<hr>
-<ol type = "I">
-  <li>Background Skills</li>
-  <ol type = "A">
-    <li>Unix Commands</li>
-    <li>Vim Text Editor</li>
-  </ol>
-  <li>HTML</li>
-  <ol type = "A">
-    <li>Minimal Page</li>
-    <li>Headlings</li>
-    <li>Tags</li>
-    <li>Lists</li>
-    <ol type = "i">
-      <li>Unordered</li>
-      <li>Ordered</li>
-      <li>Definition</li>
-      <li>Nested</li>
-    </ol>
-    <li>Links</li>
-    <ol type = "i">
-      <li>Absolute</li>
-      <li>Relative</li>
-    </ol>
-    <li>Images</li>
-  </ol>
-  <li>CSS</li>
-  <ol type = "A">
-    <li>Anatomz</li>
-    <li>Basic Selectors</li>
-    <ol type = "i">
-      <li>element</li>
-      <li>Class</li>
-      <li>ID</li>
-      <li>Group</li>
-    </ol>
-    <li>The Dom</li>
-    <li>ADvanced Selectors</li>
-    <li>Box Model</li>
-  </ol>
-  <li>Programming</li>
-  <ol type = "A">
-    <li>Python</li>
-    <li>JS</li>
-  </ol>
-  <li>DATABASE</li>
-  <ol type = "A">
-    <li>Flat File</li>
-    <li>Relational</li>
-  </ol>
-</ol>
-<h2>ANCHOR ELEMENTI</h2>
-<hr>
-<p>Ovo je <a href="https://www.tssb.hr" download="web-stranica">link</a> koji vodi na tssb stranicu.</p>
-<h2>Top 5 najdrazih websajtova</h2>
-<ol type = "1">
-  <li><a href="https://www.google.com">Google</a></li>
-  <li><a href="https://www.youtube.com">YouTube</a></li>
-  <li><a href="https://www.facebook.com">Facebook</a></li>
-  <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
-  <li><a href="https://www.instagram.com">Instagram</a></li>
-</ol>
-<h2>IMAGE ELEMENTI</h2>
-<!-- <img src="images/marko.png" alt = "Markova slika" height="150">
-<img src="https://hns.family/files/images_comet/Person/427153_baf91a13-99ab-4f34-a91a-bee0aa9f6f9e.png" alt="GARO SLIKA" height="150"> -->
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_GNK_Dinamo_Zagreb_%282019%29.svg" alt="Dinamo Logo" height="150">
-<img src="images/dinamologo.jpg" alt="Dinamo KK Logo" height="150">
-<hr>
-<h2>Its my birthday</h2>
-<h3>On the 12th May</h3>
+      </div>
+    </div>
+  </nav>
 
-<img src ="https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg" height="250">
-<h3>What to bring:</h3>
-<ul><li>Baloons</li>
-<li>Cake</li>
-<li>An appetite</li></ul>
-<h3>This is where you need to go:</h3>
-<p><a href="https://www.google.com/maps/@45.1623677,18.0066789,3a,75y,44.71h,90t/data=!3m7!1e1!3m5!1sT4KBZ-QpC7PeRnFMwxvWcg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DT4KBZ-QpC7PeRnFMwxvWcg%26yaw%3D44.71094105366858!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Lokacija</a></p>
-<hr>
-<h2>TABLE ELEMENTI</h2>
-<table border="1">
-  <tr>
-    <th colspan="2">Ime i Prezime</th>
-    <th>Razred</th>
-  </tr>
-  <tr>
-    <td>Mirko</td>
-    <td>Skrinjar</td>
-    <td rowspan="3">3.E</td>
-  </tr>
-  <tr>
-    <td>Patrik</td>
-    <td>Jagoda</td>
-  </tr>
-  <tr>
-    <td>Ana</td>
-    <td>Condic</td>
-  </tr>
-</table>
-<hr>
-<table border="1">
-  <th>name</th>
-  <th>age</th>
-  <th>city</th>
-  <tr>
-    <td>Harry Deep</td>
-    <td>28</td>
-    <td>Britain</td>
-  </tr>
-  <tr>
-    <td>John Smith</td>
-    <td>35</td>
-    <td>USA</td>
-  </tr>
-  <tr>
-    <td>Ram Kriha</td>
-    <td>19</td>
-    <td>Nepal</td>
-  </tr>
-</table>
-<hr>
-<table border = "1">
-  <th>S.N</th>
-  <th>Item</th>
-  <th>Quantity</th>
-  <tr>
-    <td>1</td>
-    <td>Apples</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Mango</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Orange</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td colspan="2">Total</td>
-    <td>5</td>
-  </tr>
-</table>
-<hr>
-<table border="1">
-  <th>Name</th>
-  <th>Subject</th>
-  <th>Marks</th>
-  <tr>
-    <td rowspan="3">Mark Smith</td>
-    <td>English</td>
-    <td>67</td>
-    </tr>
-    <tr>
-      <td>Maths</td>
-      <td>82</td>
-    </tr>
-    <tr>
-      <td>Science</td>
-      <td>91</td>
-    </tr>
-</table>
-<hr>
-<table border="1">
-  <th>No.</th>
-  <th>Full Name</th>
-  <th>Position</th>
-  <th>Salary</th>
-  <th>Type</th>
-  <tr>
-    <td>1</td>
-    <td>Bill Gates</td>
-    <td>Founder Microsoft</td>
-    <td>$1000</td>
-    <td rowspan="4">Company Founder</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Steve Jobs</td>
-    <td>Founder Apple</td>
-    <td>$1200</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Larry Page</td>
-    <td>Founder Google</td>
-    <td>$1100</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Jeff Bezos</td>
-    <td>Founder Amazon</td>
-    <td>$1300</td>
-  </tr>
-</table>
-<hr>
-<table border="1">
-  <th> </th>
-  <th>1.</th>
-  <th>2.</th>
-  <th>3.</th>
-  <th>4.</th>
-  <th>5.</th>
-  <th>6.</th>
-  <th>7.</th>
-  <tr>
-    <td>Po</td>
-    <td>FIZ</td>
-    <td>GR</td>
-    <td colspan="2">WD PMU</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container text-center py-5">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/5/56/Logo_GNK_Dinamo_Zagreb_%282019%29.svg"
+        alt="Profilna slika"
+        class="profile-img mb-4"
+      />
+      <h1 class="display-5 fw-bold">Mirko Skrinjar</h1>
+      <p class="lead text-muted">Učenik 3.E razreda Tehničke škole</p>
+      <a href="#o-meni" class="btn btn-main mt-3">Saznaj više</a>
+    </div>
+  </section>
 
-  </tr>
-    <tr>
-    <td>Ut</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    
-  </tr>
-    <tr>
-    <td>Sr</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    
-  </tr>
-    <tr>
-    <td>Ce</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-     
-  </tr>
-    <tr>
-    <td>Pe</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-    <td>2</td>
-    <td>1</td>
-</tr>
-</table>
-<h2>FORME</h2>
+  <section id="o-meni" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">O meni</h2>
+      <div class="row g-4 align-items-center">
+        <div class="col-md-6">
+          <p>
+            Zovem se Mirko Skrinjar i učenik sam 3.E razreda
+            Tehničke škole. Razrednik nam je Ivan Benić, a u razredu nas ima 26.
+          </p>
+          <p>
+            Ove školske godine smo ucili HTML, CSS iz Skriptnih jezika. Predmet mi je cijele godine bio zanimljiv
+          </p>
+          <p>
+            U slobodno vrijeme igram tenis,
+            igram igrice i provodim vrijeme s drustvom.
+            Moj cilj je nauciti web programiranje.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-group list-group-flush info-list">
+            <li class="list-group-item">
+              <strong>Ime i prezime:</strong> Mirko Skrinjar
+            </li>
+            <li class="list-group-item">
+              <strong>Razred:</strong> 3.E
+            </li>
+            <li class="list-group-item">
 
+              <strong>Škola:</strong> Tehnička škola
+            </li>
+            <li class="list-group-item">
+              <strong>Razrednik:</strong> Ivan Benić
+            </li>
+            <li class="list-group-item">
+              <strong>Hobi:</strong> Tenis, Igrice, Teretana
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOBIJI -->
+  <section id="hobiji" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Moji Hobiji</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card hobi-card h-100">
+            <div class="card-body">
+              <div class="hobi-icon mb-3">
+                <img src="./images/tenis.png"
+                  alt="Tenis" height="50"/>
+              </div>
+              <h5 class="card-title"><strong>Tenis</strong></h5>
+              <p class="card-text">
+                U slobodno vrijeme poslje skole skoro svaki dan idem na tenis i uzivam u tom sportu.
+                Tenis mi je omiljeni sport zato sto sam ovisim o sebi i nema drugih da mi pomazu ili odmazu
+              </p>
+              <p class="card-text">
+                Dinamo je moj klub od malih nogu i uvijek ću ga navijati –
+                i u dobrim i u lošim vremenima.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card hobi-card h-100">
+            <div class="card-body">
+              <div class="hobi-icon mb-3"><i class="bi bi-controller"></i></div>
+              <h5 class="card-title">Igrice</h5>
+              <p class="card-text">
+                Video igre su mi omiljeni nacin opustanja.
+                Uglavnom se igram Competitive igrice i tu nema toliko opustanja
+                ali mi je zabavno i volim igrati.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card hobi-card h-100">
+            <div class="card-body">
+              <div class="hobi-icon mb-3"><img src="./images/teretana.png"
+                  alt="Teretana" height="50"/></div>
+              <h5 class="card-title"><strong>Teretana</strong></h5>
+              <p class="card-text">
+                Idem u teretanu 3-4 puta tjedno, to me isto opusta 
+                i nakon odlaska u teretanu osjecam se pun sebe
+              </p>
+              <p class="card-text">
+                Isto tako teretana mi pomaze da bolje igram tenis
+                tj da imam vise snage i izdrzljivosti na terenu
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VJEŠTINE -->
+  <section id="vjestine" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Vještine</h2>
+      <div class="row g-3">
+
+        <div class="col-md-6">
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold">HTML</span><span>80%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-accent" style="width:80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold">CSS</span><span>65%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-accent" style="width:65%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold">C</span><span>80%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-accent" style="width:80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold">JavaScript</span><span>0%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-accent" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold">C++</span><span>20%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-accent" style="width:20%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="skill-item">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="fw-semibold">C#</span><span>60%</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar bg-accent" style="width:60%"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ZADAĆE -->
+  <section id="zadace" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Popis Zadaća</h2>
+      <div class="row g-3">
+
+        <div class="col-md-6 col-lg-4">
+          <a href="zadace/zadaca1.html" target="_blank" class="zadaca-link">
+            <div class="card zadaca-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="zadaca-num">01</span>
+                <div>
+                  <h6 class="mb-0">Zadaća 1</h6>
+                  <small class="text-muted">Prva zadaca</small>
+                </div>
+                <i class="bi bi-box-arrow-up-right ms-auto text-accent"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="zadace/zadaca2.html" target="_blank" class="zadaca-link">
+            <div class="card zadaca-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="zadaca-num">02</span>
+                <div>
+                  <h6 class="mb-0">Zadaća 2</h6>
+                  <small class="text-muted">Druga zadaca</small>
+                </div>
+                <i class="bi bi-box-arrow-up-right ms-auto text-accent"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="zadace/zadaca3/index.html" target="_blank" class="zadaca-link">
+            <div class="card zadaca-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="zadaca-num">03</span>
+                <div>
+                  <h6 class="mb-0">Zadaća 3</h6>
+                  <small class="text-muted">Treca zadaca</small>
+                </div>
+                <i class="bi bi-box-arrow-up-right ms-auto text-accent"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="zadace/zadaca4.html" target="_blank" class="zadaca-link">
+            <div class="card zadaca-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="zadaca-num">04</span>
+                <div>
+                  <h6 class="mb-0">Zadaća 4</h6>
+                  <small class="text-muted">Cetvrta zadaca</small>
+                </div>
+                <i class="bi bi-box-arrow-up-right ms-auto text-accent"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="zadace/zadaca5.html" target="_blank" class="zadaca-link">
+            <div class="card zadaca-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="zadaca-num">05</span>
+                <div>
+                  <h6 class="mb-0">Zadaća 5</h6>
+                  <small class="text-muted">Peta zadaca</small>
+                </div>
+                <i class="bi bi-box-arrow-up-right ms-auto text-accent"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <a href="zadace/zadaca6.html" target="_blank" class="zadaca-link">
+            <div class="card zadaca-card">
+              <div class="card-body d-flex align-items-center gap-3">
+                <span class="zadaca-num">06</span>
+                <div>
+                  <h6 class="mb-0">Zadaća 6</h6>
+                  <small class="text-muted">Sesta zadaca</small>
+                </div>
+                <i class="bi bi-box-arrow-up-right ms-auto text-accent"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+  <section id="kontakt" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Kontaktirajte Nas</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="card p-4 shadow-sm">
+            <form action="#" method="GET">
+
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label for="ime" class="form-label">Ime i prezime</label>
+                  <input type="text" class="form-control" id="ime" name="ime"
+                    placeholder="Mirko Skrinjar" required/>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email adresa</label>
+                  <input type="email" class="form-control" id="email" name="email"
+                    placeholder="mirko@mail.com" required/>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="poruka" class="form-label">Poruka</label>
+                <textarea class="form-control" id="poruka" name="poruka" rows="5"
+                  placeholder="Napišite svoju poruku..." required></textarea>
+              </div>
+
+              <div class="mb-4">
+                <label for="datum" class="form-label">Preferirani datum kontakta</label>
+                <input type="date" class="form-control" id="datum" name="datum"/>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-main">
+                  <i class="bi bi-send-fill me-2"></i>Pošalji Poruku
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 Mirko Skrinjar</p> <a href="/"
+            class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+            aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                <use xlink:href="#bootstrap"></use>
+            </svg> </a>
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#o-meni" class="nav-link px-2 text-body-secondary">O meni</a></li>
+            <li class="nav-item"><a href="#hobiji" class="nav-link px-2 text-body-secondary">Hobiji</a></li>
+            <li class="nav-item"><a href="#vjestine" class="nav-link px-2 text-body-secondary">Vjestine</a></li>
+            <li class="nav-item"><a href="#zadace" class="nav-link px-2 text-body-secondary">Zadace</a></li>
+            <li class="nav-item"><a href="#kontakt" class="nav-link px-2 text-body-secondary">Kontakt</a></li>
+        </ul>
+    </footer>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
